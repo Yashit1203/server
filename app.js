@@ -8,6 +8,8 @@ const fileupload = require('express-fileupload')
 var cookieParser = require('cookie-parser')
 const cors=require("cors")
 
+require("dotenv").config();
+
 
 
 // token get cookie
@@ -41,6 +43,6 @@ app.use(express.json());
 
 
 app.use('/api', web);
-app.listen(port, console.log(`Server is running on localhost:3000`))
+app.listen(process.env.PORT, console.log(`Server is running on localhost:3000`))
 
 
